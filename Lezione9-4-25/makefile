@@ -1,24 +1,36 @@
- # This is a comment line
 CC=g++
-# CFLAGS will be the options passed to
-# the compiler.
-CFLAGS= -c -Wall
-LFLAGS= -O -Wall
-MAIN= main
+INCDIRS=-I.
+OPT=-O0
+CFLAGS=-Wall -Wextra -g $(INCDIRS) $(OPT)
 
-all: prog clean
-prog: main.o
-	$(CC) main.o -o main.out;			\
-	if ["$?" -ne 0]; then				\
-		cp main_stg.cpp main.cpp;		\
-	else								\
-		cp main.cpp main_stg.cpp;		\
+OBJECTS=main.o
+
+BINARY=main.out
+
+all: $(BINARY) clean
+
+# if i wanna build: $(CC) -o $@ $^, then i need $(OBJECTS)
+
+$(BINARY): $(OBJECTS) 	# <post-cond>: <pre-cond>
+	@if $(CC) $^ -o $@; then \
+		echo "Linking riuscito"; \
+		cp main.cpp main_stg.cpp; \
+	else \
+		echo "Linking no riuscito"; \
+		if [ -f "main_stg.cpp" ]; then \
+			cp main_stg.cpp main.cpp; \
+		fi; \
 	fi
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
-clean:
-	rm -rf *.o
+	
+%.o: %.cpp # implicit rule for $(OBJECTS) using placeholder '%'
+	@if $(CC) $(CFLAGS) -c -o $@ $^; then \
+	echo "Compilazione riuscita"; \
+	else echo "Compilazione non riuscita";\
+	fi
 
+clean:
+	rm -rf $(OBJECTS)
+	
 	
 
 
