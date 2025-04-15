@@ -1,82 +1,82 @@
 
-#include <iostream>
+  #include <iostream>
 
-using namespace std;
-
-
-struct Studente {
-
-  ulong Id = 0;
-  string Matricola = "N86000000";
-  string Cognome = "";
-  string Nome = "";
-
-  // Studente() = default;
-  // Studente(ulong idx, string mat, string cog, string nom) {
-  //   Id = idx; Matricola = mat; Cognome = cog; Nome = nom;
-  //   // Id++; Matricola += "XYZ";
-  // }
-
-};
+  using namespace std;
 
 
-enum class Colore { Bianco, Grigio, Nero }; // Enumeration a la C++
-enum class Colore1 { Bianco, Rosso };
+  struct Studente {
 
-enum Colore2 { Rosso, Giallo, Verde }; // Enumeration a la C
-enum Colore3 { Marrone, Azzurro };
-// enum Colore4 { Rosso, Marrone }; // Error: duplicated value!
+    ulong Id = 0;
+    string Matricola = "N86000000";
+    string Cognome = "";
+    string Nome = "";
+
+    // Studente() = default;
+    // Studente(ulong idx, string mat, string cog, string nom) {
+    //   Id = idx; Matricola = mat; Cognome = cog; Nome = nom;
+    //   // Id++; Matricola += "XYZ";
+    // }
+
+  };
 
 
-int main() {
+  enum class Colore { Bianco, Grigio, Nero }; // Enumeration a la C++
+  enum class Colore1 { Bianco, Rosso };
 
-  // Slide 1
+  enum Colore2 { Rosso, Giallo, Verde }; // Enumeration a la C
+  enum Colore3 { Marrone, Azzurro };
+  // enum Colore4 { Rosso, Marrone }; // Error: duplicated value!
 
-  Studente stu;
 
-  cout << "Id: " << stu.Id << endl;
-  cout << "Matricola: " << stu.Matricola << endl;
-  cout << "Cognome: " << stu.Cognome << endl;
-  cout << "Nome: " << stu.Nome << endl;
+  int main() {
 
-  stu.Id = 1;
-  stu.Matricola = "N86000001";
-  stu.Cognome = "Turing";
-  stu.Nome = "Alan";
+    // Slide 1
 
-  cout << "Id: " << stu.Id << endl;
-  cout << "Matricola: " << stu.Matricola << endl;
-  cout << "Cognome: " << stu.Cognome << endl;
-  cout << "Nome: " << stu.Nome << endl;
+    Studente stu;
 
-  // Studente stu1 { 2, "N86000002", "Gödel" };
-  // // Studente stu1 = { 2, "N86000002", "Gödel", "Kurt" }; // Equivalente definition
+    cout << "Id: " << stu.Id << endl;
+    cout << "Matricola: " << stu.Matricola << endl;
+    cout << "Cognome: " << stu.Cognome << endl;
+    cout << "Nome: " << stu.Nome << endl;
 
-  // cout << "Id: " << stu1.Id << endl;
-  // cout << "Matricola: " << stu1.Matricola << endl;
-  // cout << "Cognome: " << stu1.Cognome << endl;
-  // cout << "Nome: " << stu1.Nome << endl;
+    stu.Id = 1;
+    stu.Matricola = "N86000001";
+    stu.Cognome = "Turing";
+    stu.Nome = "Alan";
 
-  // Studente stu2(3, "N86000003", "Church", "Alonzo");
+    cout << "Id: " << stu.Id << endl;
+    cout << "Matricola: " << stu.Matricola << endl;
+    cout << "Cognome: " << stu.Cognome << endl;
+    cout << "Nome: " << stu.Nome << endl;
 
-  // cout << "Id: " << stu2.Id << endl;
-  // cout << "Matricola: " << stu2.Matricola << endl;
-  // cout << "Cognome: " << stu2.Cognome << endl;
-  // cout << "Nome: " << stu2.Nome << endl;
+    // Studente stu1 { 2, "N86000002", "Gödel" };
+    // // Studente stu1 = { 2, "N86000002", "Gödel", "Kurt" }; // Equivalente definition
 
-  // // Slide 2
+    // cout << "Id: " << stu1.Id << endl;
+    // cout << "Matricola: " << stu1.Matricola << endl;
+    // cout << "Cognome: " << stu1.Cognome << endl;
+    // cout << "Nome: " << stu1.Nome << endl;
 
-  // Colore color = Colore::Grigio;
+    // Studente stu2(3, "N86000003", "Church", "Alonzo");
 
-  // cout << (color < Colore::Nero) << endl;
-  // cout << (color == Colore::Bianco) << endl;
-  // // cout << (Colore::Bianco == Colore1::Bianco) << endl;
+    // cout << "Id: " << stu2.Id << endl;
+    // cout << "Matricola: " << stu2.Matricola << endl;
+    // cout << "Cognome: " << stu2.Cognome << endl;
+    // cout << "Nome: " << stu2.Nome << endl;
 
-  // Colore1 color1 = Colore1::Rosso;
-  // // Colore1 color1 = Colore::Bianco;
+    // // Slide 2
 
-  // Colore2 color2 = Giallo;
-  // // Colore2 color2 = Azzurro;
+    // Colore color = Colore::Grigio;
 
-  return 0;
-}
+    // cout << (color < Colore::Nero) << endl;
+    // cout << (color == Colore::Bianco) << endl;
+    // // cout << (Colore::Bianco == Colore1::Bianco) << endl;
+
+    // Colore1 color1 = Colore1::Rosso;
+    // // Colore1 color1 = Colore::Bianco;
+
+    // Colore2 color2 = Giallo;
+    // // Colore2 color2 = Azzurro;
+
+    return 0;
+  }

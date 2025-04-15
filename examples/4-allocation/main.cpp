@@ -10,7 +10,7 @@ int main() {
 
   try {
 
-    ulong * ulptr = new ulong; // Uninitialized unsigned long
+    ulong *ulptr = new ulong; // Uninitialized unsigned long
     // ulong* ulptr = new ulong(5); // new ulong{5} // Unsigned long initialized to 5
 
     cout << (*ulptr)++ << endl;
@@ -46,7 +46,7 @@ int main() {
     cout << ulptr[2] << endl;
 
     delete[] ulptr; // ulptr = nullptr;
-    // delete[] ulptr; // Double free cannot be catched!
+    // delete[] ulptr; // Double free cannot be catched! // La delete puo ricevere nullptr senza conseguenze, per agevolare l'astrazione procedurale.
 
   }
   catch (bad_alloc exc) {
