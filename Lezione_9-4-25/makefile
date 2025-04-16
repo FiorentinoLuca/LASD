@@ -1,21 +1,3 @@
-#include <iostream>
-#include "test.hpp"
-#include "test.hpp"
-
-using namespace std;
-
-int y = 19;
-
-int main() {
-
-    // const int y;
-    // const int x;
-//where ami
-
-
-
-/*
-
 CC=g++
 INCDIRS=-I.
 OPT=-O0
@@ -30,7 +12,7 @@ all: $(BINARY) clean
 # if i wanna build: $(CC) -o $@ $^, then i need $(OBJECTS)
 
 $(BINARY): $(OBJECTS) 	# <post-cond>: <pre-cond>
-	if $(CC) $^ -o $@; then \
+	@if $(CC) $^ -o $@; then \
 		echo "Linking riuscito"; \
 		cp main.cpp main_stg.cpp; \
 	else \
@@ -49,14 +31,8 @@ $(BINARY): $(OBJECTS) 	# <post-cond>: <pre-cond>
 clean:
 	rm -rf $(OBJECTS)
 	
+	
 
 
 
-*/
 
-    
-    cout << "call to function: #";
-
-    return 0;
-
-}
